@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="lib/modules/directives/numpad/numPad.css">
+<div>
+    <div class="key-mask ng-hide" ng-click="hideKeyBoard($event)"></div>
+    <div class="key-container ng-hide">
+        <div class="hide-board" ng-click="hideKeyBoard($event)">完成</div>
+        <div class="row">
+            <p class="num-item">1</p>
+            <p class="num-item">2</p>
+            <p class="num-item">3</p>
+        </div>
+        <div class="row">
+            <p class="num-item">4</p>
+            <p class="num-item">5</p>
+            <p class="num-item">6</p>
+        </div>
+        <div class="row">
+            <p class="num-item">7</p>
+            <p class="num-item">8</p>
+            <p class="num-item">9</p>
+        </div>
+        <div class="row">
+            <p class="num-item b-gray">.</p>
+            <p class="num-item">0</p>
+            <div class="delete b-gray" id="cross" ng-click="deleteElement()"></div>
+        </div>
+    </div>
+</div>
