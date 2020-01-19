@@ -1,0 +1,5 @@
+button{border: 1px solid #333333;width: 40vw;height: 10vw;background-color: #ffffff;border-radius: 5vw;box-shadow: 1px 1px #656565;margin-bottom: 2vw;}
+.ButtonActive{background-color: #90edf9}
+input{border: 1px solid #333333;width: 40vw;height: 10vw;font-size: 6vw;text-align: center;}
+.MethodTitle{width: 100%;position: relative;}
+.buttonToggle{position: absolute;right: 0;font-size: 2vw;}
