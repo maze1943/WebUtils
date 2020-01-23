@@ -3,3 +3,9 @@ button{border: 1px solid #333333;width: 40vw;height: 10vw;background-color: #fff
 input{border: 1px solid #333333;width: 40vw;height: 10vw;font-size: 6vw;text-align: center;}
 .MethodTitle{width: 100%;position: relative;}
 .buttonToggle{position: absolute;right: 0;font-size: 2vw;}
+
+.DivBorder{
+    border: 1px solid #333;
+    width: 20vw;
+    height: 10vw;
+}

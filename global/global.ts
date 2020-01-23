@@ -1,5 +1,5 @@
 // 导入模块
-import {dateUtils} from './dateUtil.js';
+import {dateUtils} from '../dateUtil.js';
 
 // 全局方法
 const _ = window;
