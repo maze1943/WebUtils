@@ -1,9 +1,9 @@
-var dateUtils = {};
+const dateUtils = {};
 export { dateUtils };
 //Date ==> yyyyMMddHHmmssms
 dateUtils['dateToFullDateStr'] = function (input) {
     input = input ? input : new Date();
-    var fullDateStr = '', yyyy = input.getFullYear(), MM = input.getMonth() + 1, dd = input.getDate(), HH = input.getHours(), mm = input.getMinutes(), ss = input.getSeconds(), ms = input.getMilliseconds();
+    let fullDateStr = '', yyyy = input.getFullYear(), MM = input.getMonth() + 1, dd = input.getDate(), HH = input.getHours(), mm = input.getMinutes(), ss = input.getSeconds(), ms = input.getMilliseconds();
     fullDateStr = yyyy.toString() + (MM < 10 ? ("0" + MM.toString()) : MM.toString());
     fullDateStr = fullDateStr + (dd < 10 ? ("0" + dd.toString()) : dd.toString());
     fullDateStr = fullDateStr + (HH < 10 ? ("0" + HH.toString()) : HH.toString());

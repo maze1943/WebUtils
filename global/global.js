@@ -1,7 +1,7 @@
 // 导入模块
 import { dateUtils } from '../dateUtil.js';
 // 全局方法
-var _ = window;
+const _ = window;
 _["apiList"] = {
     "dateUtiles": [
         "dateToFullDateStr",
@@ -11,9 +11,9 @@ _["apiList"] = {
     ]
 };
 // 获取当前点击的方法
-_['_getUtils'] = function (that) {
-    var thatNode = that;
-    var activeNode = document.getElementsByClassName("ButtonActive")[0];
+_['_getUtils'] = (that) => {
+    const thatNode = that;
+    const activeNode = document.getElementsByClassName("ButtonActive")[0];
     if (activeNode) {
         activeNode.className = "";
     }
@@ -22,12 +22,12 @@ _['_getUtils'] = function (that) {
     console.log("执行方法：" + thatNode.innerHTML);
 };
 //展开或收起方法列表
-_["_buttonToggle"] = function (that, apiName) {
-    var thatDom = that, apiListNode = document.getElementsByClassName("apiList")[0];
-    var nodeElements = "";
+_["_buttonToggle"] = (that, apiName) => {
+    const thatDom = that, apiListNode = document.getElementsByClassName("apiList")[0];
+    let nodeElements = "";
     if (thatDom.innerHTML === "展开&gt;&gt;&gt;") {
         thatDom.innerHTML = "收起&lt;&lt;&lt;";
-        _["apiList"][apiName].forEach(function (ele) {
+        _["apiList"][apiName].forEach(ele => {
             nodeElements = nodeElements + "<button onclick='_getUtils(this)'>" + ele + "</button><br/>";
         });
         apiListNode.innerHTML = nodeElements;
@@ -38,10 +38,10 @@ _["_buttonToggle"] = function (that, apiName) {
     }
 };
 // 执行对应方法，展示执行结果
-_['_excuteMethod'] = function () {
+_['_excuteMethod'] = () => {
     if (_['method']) {
-        var inValue = document.getElementsByClassName("input_text")[0]["value"];
-        var outNode = document.getElementsByClassName("result_text")[0];
+        const inValue = document.getElementsByClassName("input_text")[0]["value"];
+        let outNode = document.getElementsByClassName("result_text")[0];
         console.log("执行结果：" + _['method'](inValue));
         outNode["value"] = _['method'](inValue);
     }
