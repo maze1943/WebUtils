@@ -128,3 +128,8 @@ input {
     border-radius: 2.5vw 2.5vw 0 0;
     transform-origin: 100% 100%;
 }
+.infoArea{
+    text-align: center;
+    color: palegreen;
+    font-weight: bold;
+}
