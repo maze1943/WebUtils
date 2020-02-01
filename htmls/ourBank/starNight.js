@@ -50,7 +50,7 @@
                 } else if (i === 4) {
                     $('.peopleImg').fadeOut(2000);
                 } else if (i === 5) {
-                    $('.peopleImg').attr('src', '../../img/4.png').fadeIn(2000);
+                    $('.peopleImg').attr('src', 'img/4.png').fadeIn(2000);
                 }
                 interval = setInterval(fellback, 2500);
                 i++;

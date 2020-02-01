@@ -10,7 +10,7 @@ Router.prototype.setRoute = function (params) {
 //路由刷新，加载html片段及js
 Router.prototype.refresh = function () {
     this.currentUrl = location.hash.slice(1) || '/';
-    let r = this.routes[this.currentUrl];
+    let r = this.routes[this.currentUrl.substring(0, this.currentUrl.indexOf('?'))];
     if (r && r['url']) {
         ajax({ url: _c.requestHead + r['url'] }).then(res => {
             window['loadNode'].innerHTML = res;
