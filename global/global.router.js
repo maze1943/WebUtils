@@ -19,7 +19,7 @@ Router.prototype.refresh = function () {
         });
         if (r['script']) {
             let x = document.createElement('script');
-            x.src = `${r['script']}?${new Date().getTime()}`;
+            x.src = r['script'];
             let s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(x, s);
         }
@@ -38,10 +38,20 @@ window['goto'] = function (routeName) {
 let router = new Router();
 router.setRoute({
     path: '/login',
-    url: '/htmls/login.html',
-    script: '/htmls/login.js'
+    url: '../htmls/ourBank/login.html',
+    script: '../htmls/ourBank/login.js'
 });
 router.setRoute({
     path: '/accountInfo',
-    url: '/htmls/accountInfo.html'
+    url: '../htmls/ourBank/accountInfo.html'
+});
+router.setRoute({
+    path: '/starNight',
+    url: '../htmls/ourBank/starNight.html',
+    script: '../htmls/ourBank/starNight.js'
+});
+router.setRoute({
+    path: '/webUtils',
+    url: '../htmls/webUtils/webUtils.html',
+    script: '../htmls/webUtils/webUtils.js'
 });
