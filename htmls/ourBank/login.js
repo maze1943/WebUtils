@@ -24,8 +24,8 @@
         const wrapEle = document.querySelector('.wrap'), account = document.querySelector('.account'), password = document.querySelector('.password');
         let Node = '';
         if (account['value'] === "小麋鹿" && password['value'] === "扑通扑通") {
-            // window['goto']("accountInfo");
-            window['goto']("starNight");
+            alert('1');
+            window['goto']("accountInfo");
         }
     }
     _g = {

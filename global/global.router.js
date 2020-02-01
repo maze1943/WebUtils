@@ -12,14 +12,14 @@ Router.prototype.refresh = function () {
     this.currentUrl = location.hash.slice(1) || '/';
     let r = this.routes[this.currentUrl];
     if (r && r['url']) {
-        ajax({ url: r['url'] }).then(res => {
+        ajax({ url: _c.requestHead + r['url'] }).then(res => {
             window['loadNode'].innerHTML = res;
         }).catch(error => {
             alert(error);
         });
         if (r['script']) {
             let x = document.createElement('script');
-            x.src = r['script'];
+            x.src = _c.requestHead + r['script'];
             let s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(x, s);
         }
@@ -38,20 +38,20 @@ window['goto'] = function (routeName) {
 let router = new Router();
 router.setRoute({
     path: '/login',
-    url: '../htmls/ourBank/login.html',
-    script: '../htmls/ourBank/login.js'
+    url: '/htmls/ourBank/login.html',
+    script: '/htmls/ourBank/login.js'
 });
 router.setRoute({
     path: '/accountInfo',
-    url: '../htmls/ourBank/accountInfo.html'
+    url: '/htmls/ourBank/accountInfo.html'
 });
 router.setRoute({
     path: '/starNight',
-    url: '../htmls/ourBank/starNight.html',
-    script: '../htmls/ourBank/starNight.js'
+    url: '/htmls/ourBank/starNight.html',
+    script: '/htmls/ourBank/starNight.js'
 });
 router.setRoute({
     path: '/webUtils',
-    url: '../htmls/webUtils/webUtils.html',
-    script: '../htmls/webUtils/webUtils.js'
+    url: '/htmls/webUtils/webUtils.html',
+    script: '/htmls/webUtils/webUtils.js'
 });
