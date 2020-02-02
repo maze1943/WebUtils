@@ -44,6 +44,7 @@ input {
     left: 0;
     position: absolute;
     background-color: rgba(255, 117, 76, 1);
+    font-family: QingGua;
 }
 
 .mixiujuan {
@@ -132,4 +133,81 @@ input {
     text-align: center;
     color: palegreen;
     font-weight: bold;
+    height: 4vw;
+    line-height: 4vw;
+}
+
+.starnight {
+    background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+    background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+    background-attachment: fixed;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'QingGua';
+    src: url('font/qinggua.ttf')
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+    }
+}
+
+.stars {
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    perspective-origin: 50% 100%;
+    left: 50%;
+    animation: rotate 90s infinite linear;
+}
+
+.star {
+    width: 2px;
+    height: 2px;
+    background: #F7F7B6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0 -300px;
+    transform: translate3d(0, 0, -300px);
+    backface-visibility: hidden;
+}
+
+.txt {
+    color: #fff;
+    font-family: QingGua;
+    font-size: 5.8vw;
+    text-align: center;
+    margin-top: 6vw;
+    letter-spacing: 1vw;
+}
+
+.bigTxt {
+    font-size: 8.8vw;
+}
+
+.moonImg {
+    width: 68%;
+    display: none;
+}
+
+.peopleImg {
+    height: 60vw;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    display: none;
 }
