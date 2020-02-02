@@ -16,10 +16,10 @@
                 break;
             case "米秀娟":
             case "mixiujuan":
-                errorInfo = "嗯，很接近了，加油";
+                errorInfo = "你就是那个可爱的二傻子？";
                 break;
             case "小麋鹿":
-                errorInfo = "聪明哦，想看星星嘛？输入‘小星星’试试";
+                errorInfo = "聪明哦，密码是‘扑通扑通’，想看星星嘛？换成‘小星星’试试";
                 break;
             default:
                 errorInfo = "";

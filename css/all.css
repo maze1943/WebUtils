@@ -94,7 +94,7 @@ input {
     color: rgba(255, 117, 76, 1);
     background-color: #ffffff;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 20vw;
+    margin-top: 10vw;
     font-weight: bold;
     font-size: 6vw;
 }
@@ -135,6 +135,13 @@ input {
     font-weight: bold;
     height: 4vw;
     line-height: 4vw;
+}
+
+.accountInfo{
+    text-align: center;
+}
+.acctitle{
+    font-size: 6vw;
 }
 
 .starnight {
