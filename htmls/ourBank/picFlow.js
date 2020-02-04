@@ -76,7 +76,7 @@
                         var aEl = document.createElement('a');
                         imgShow.appendChild(aEl);
                         var img = document.createElement('img');
-                        img.src = '../../img/' + dataInt.data[i].src;
+                        img.src = 'img/' + dataInt.data[i].src;
                         aEl.appendChild(img);
                         _this.container[0].appendChild(imgShow);
 
