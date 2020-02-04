@@ -61,3 +61,8 @@ router.setRoute({
     url: '/htmls/webUtils/webUtils.html',
     script: '/htmls/webUtils/webUtils.js'
 });
+router.setRoute({
+    path: '/picFlow',
+    url: '/htmls/ourBank/picFlow.html',
+    script: '/htmls/ourBank/picFlow.js'
+})

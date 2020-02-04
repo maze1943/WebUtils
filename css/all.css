@@ -129,7 +129,8 @@ input {
     border-radius: 2.5vw 2.5vw 0 0;
     transform-origin: 100% 100%;
 }
-.infoArea{
+
+.infoArea {
     text-align: center;
     color: palegreen;
     font-weight: bold;
@@ -137,11 +138,46 @@ input {
     line-height: 4vw;
 }
 
-.accountInfo{
+.accountInfo {
     text-align: center;
 }
-.acctitle{
+
+.acctitle {
     font-size: 6vw;
+}
+
+.memory {
+    color: #fff;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 6vw;
+    animation: memoryFont 2s infinite;
+    animation-direction: alternate;
+    -webkit-animation: memoryFont 2s infinite;
+    -webkit-animation-direction: alternate;
+}
+.memory img{
+    width: 3vw;
+}
+
+@keyframes memoryFont {
+    0% {
+        font-size: 4vw;
+    }
+
+    100% {
+        font-size: 6vw
+    }
+}
+
+@-webkit-keyframes memoryFont {
+    0% {
+        font-size: 4vw;
+    }
+
+    100% {
+        font-size: 6vw
+    }
 }
 
 .starnight {
@@ -217,4 +253,95 @@ input {
     position: absolute;
     right: 0;
     display: none;
+}
+
+.imgShow img {
+    display: block;
+    width: 200px;
+    border: 0;
+}
+
+.container {
+    position: relative;
+    margin-top: 50px;
+}
+
+.imgShow {
+    position: absolute;
+    float: left;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-transition: all .7s ease-out .1s;
+    -moz-transition: all .7s ease-out .1s;
+    -o-transition: all .7s ease-out .1s;
+    transition: all .7s ease-out .1s;
+}
+
+#loading {
+    background-color: #bd4932;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+#object {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    -webkit-animation: animate 1s infinite ease-in-out;
+    animation: animate 1s infinite ease-in-out;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+}
+
+@-webkit-keyframes animate {
+    0% {
+        -webkit-transform: perspective(160px);
+    }
+
+    50% {
+        -webkit-transform: perspective(160px) rotateY(-180deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    }
 }
