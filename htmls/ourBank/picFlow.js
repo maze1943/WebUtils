@@ -145,9 +145,6 @@
         var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
         var lastElement = $(this.items[this.items.length - 1]);
         var b = (widnowHeight + scrollHeight) > (lastElement.offset().top + lastElement.height() / 2);
-        console.log(lastElement.offset(), lastElement.height());
-        console.log(widnowHeight, scrollHeight, lastElement);
-        console.log(b);
         return (b);
     }
 
