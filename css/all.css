@@ -47,7 +47,7 @@ input {
     right: 0;
     left: 0;
     position: absolute;
-    background-color: rgba(130, 123, 121);
+    background-color: rgba(0, 0, 0);
     font-family: QingGua;
 }
 
@@ -57,7 +57,7 @@ input {
     font-weight: bold;
     letter-spacing: 5vw;
     text-align: center;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.2);
     margin: 40vw 0 30vw;
 }
 
